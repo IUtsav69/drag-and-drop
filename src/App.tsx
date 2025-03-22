@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LeftSidebar from './components/Sidebar/LeftSidebar';
 import Canvas from './components/Canvas/Canvas';
-import RightSidebar from './components/Sidebar/RightSidebar';
 import BlocksPanel from './components/BlocksPanel/BlocksPanel';
 
 function App() {
@@ -14,12 +13,14 @@ function App() {
 
   return (
     <div className="flex h-screen">
-      <LeftSidebar />
+      <LeftSidebar 
+        onSelectTemplate={handleTemplateSelect}
+        selectedTemplate={selectedTemplate}
+      />
       <Canvas 
         onAddBlock={() => setShowBlocksPanel(true)} 
         selectedTemplate={selectedTemplate}
       />
-      <RightSidebar />
       {showBlocksPanel && (
         <BlocksPanel 
           onClose={() => setShowBlocksPanel(false)}

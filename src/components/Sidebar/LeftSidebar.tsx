@@ -15,7 +15,12 @@ const menuItems: MenuItem[] = [
   { label: 'Footer', icon: <FooterIcon className="w-4 h-4" /> },
 ];
 
-export default function LeftSidebar() {
+interface LeftSidebarProps {
+  onSelectTemplate: (template: string) => void;
+  selectedTemplate: string | null;
+}
+
+export default function LeftSidebar({ onSelectTemplate, selectedTemplate }: LeftSidebarProps) {
   return (
     <div className="w-64 bg-white border-r border-gray-200 h-screen">
       <div className="p-4 border-b border-gray-200">
@@ -27,7 +32,12 @@ export default function LeftSidebar() {
           {menuItems.map((item) => (
             <button
               key={item.label}
-              className="flex items-center w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md mb-1"
+              className={`flex items-center w-full px-3 py-2 rounded-md mb-1 ${
+                selectedTemplate === item.label
+                  ? 'bg-blue-50 text-blue-600'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+              onClick={() => onSelectTemplate(item.label)}
             >
               {item.icon}
               <span className="ml-3">{item.label}</span>
