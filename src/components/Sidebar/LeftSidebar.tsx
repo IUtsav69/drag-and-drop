@@ -23,8 +23,10 @@ interface LeftSidebarProps {
 export default function LeftSidebar({ onSelectTemplate, selectedTemplate }: LeftSidebarProps) {
   return (
     <div className="w-64 bg-white border-r border-gray-200 h-screen">
-      <div className="p-4 border-b border-gray-200">
-        <h1 className="text-xl font-semibold text-blue-500">DashStack</h1>
+      <div className="p-4 border-b border-gray-200 flex justify-center">
+        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text">
+          DashStack
+        </h1>
       </div>
       <div className="p-4">
         <p className="text-sm text-gray-500 mb-4">Untitled</p>

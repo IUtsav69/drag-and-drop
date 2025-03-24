@@ -8,7 +8,6 @@ import { GridCategory, ListCategory } from './templates/CategoryTemplates';
 import { SimpleFooter, ComplexFooter } from './templates/FooterTemplates';
 import DesignTemplates from '../Sidebar/DesignTemplates';
 
-// Update the ViewMode type to match the one in ViewToggle.tsx
 type ViewMode = 'desktop' | 'tablet' | 'mobile' | 'code' | 'edit';
 
 interface CanvasProps {
@@ -38,214 +37,21 @@ export default function Canvas({ onAddBlock, selectedTemplate }: CanvasProps) {
   const getTemplateCode = () => {
     switch (selectedTemplate) {
       case 'landing-1':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { Search, ShoppingCart, Heart, ArrowRight } from 'lucide-react';
-
-// Landing Page Template code
-export default function LandingPageTemplate() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <motion.nav 
-        className="px-6 py-4 border-b"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Navigation content */}
-      </motion.nav>
-
-      {/* Hero Section */}
-      <motion.div 
-        className="relative bg-gradient-to-r from-gray-50 to-white"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        {/* Hero content */}
-      </motion.div>
-
-      {/* Collection Section */}
-      <motion.div 
-        className="max-w-7xl mx-auto px-6 py-16"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {/* Collection content */}
-      </motion.div>
-    </div>
-  );
-}`;
+        return `yet i need to upload code`;
       case 'landing-2':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ShoppingBag, Star, TrendingUp } from 'lucide-react';
-
-// Minimal Landing Template code
-export default function MinimalLandingTemplate() {
-  return (
-    <div className="min-h-screen bg-[#f8f8f8]">
-      {/* Navigation */}
-      <motion.nav 
-        className="px-6 py-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Navigation content */}
-      </motion.nav>
-
-      {/* Hero Section */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        {/* Hero content */}
-      </div>
-
-      {/* Features */}
-      <motion.div 
-        className="bg-white py-16"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {/* Features content */}
-      </motion.div>
-
-      {/* Products Grid */}
-      <motion.div 
-        className="max-w-6xl mx-auto px-6 py-16"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {/* Products content */}
-      </motion.div>
-    </div>
-  );
-}`;
+        return `yet i need to upload code`;
       case 'navbar-1':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-
-// Simple Navbar Template code
-export const SimpleNavbar = () => {
-  return (
-    <motion.nav 
-      className="bg-white border-b"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold">Simple</h1>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
-              {/* Navigation items */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.nav>
-  );
-};`;
+        return `yet i need to upload code`;
       case 'navbar-2':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { Search, ShoppingCart, Heart, Menu, User, ChevronDown } from 'lucide-react';
-
-// Complex Navbar Template code
-export const ComplexNavbar = () => {
-  return (
-    <motion.nav 
-      className="bg-white border-b"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Navbar content */}
-    </motion.nav>
-  );
-};`;
+        return `yet i need to upload code`;
       case 'category-1':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-
-// Grid Category Template code
-export const GridCategory = () => {
-  const categories = [
-    // Category items
-  ];
-
-  return (
-    <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Category content */}
-      </div>
-    </div>
-  );
-};`;
+        return `yet i need to upload code`;
       case 'category-2':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-
-// List Category Template code
-export const ListCategory = () => {
-  const categories = [
-    // Category items
-  ];
-
-  return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Category content */}
-      </div>
-    </div>
-  );
-};`;
+        return `yet i need to upload code`;
       case 'footer-1':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
-
-// Simple Footer Template code
-export const SimpleFooter = () => {
-  return (
-    <motion.footer 
-      className="bg-gray-900 text-white py-12"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Footer content */}
-    </motion.footer>
-  );
-};`;
+        return `yet i need to upload code`;
       case 'footer-2':
-        return `import React from 'react';
-import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
-
-// Complex Footer Template code
-export const ComplexFooter = () => {
-  return (
-    <motion.footer 
-      className="bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Footer content */}
-    </motion.footer>
-  );
-};`;
+        return `yet i need to upload code`;
       default:
         return 'No template selected';
     }
